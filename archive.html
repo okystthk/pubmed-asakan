@@ -92,13 +92,17 @@ article .num{
 }
 article.p-must .num{border-color:var(--must); color:var(--must);}
 article.p-fyi .num{border-color:var(--fyi); color:var(--fyi);}
-a.save{
+button.save{
   display:inline-flex; align-items:center; gap:5px;
-  padding:5px 11px; border:1px solid var(--accent); border-radius:3px;
-  color:var(--accent); text-decoration:none; font-size:11.5px; letter-spacing:.03em;
+  padding:6px 12px; border:1px solid var(--accent); border-radius:3px;
+  background:transparent; color:var(--accent); cursor:pointer;
+  font-family:inherit; font-size:11.5px; letter-spacing:.03em; line-height:1.4;
 }
-a.save:hover{background:var(--accent); color:var(--paper);}
-a.save:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+button.save:hover:not(:disabled){background:var(--accent); color:var(--paper);}
+button.save:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+button.save:disabled{cursor:default;}
+button.save.done{border-color:var(--rule-hard); color:var(--ink-soft); background:transparent;}
+button.save.failed{border-color:var(--must); color:var(--must);}
 article footer{
   display:flex; flex-wrap:wrap; gap:8px 14px; align-items:baseline;
   margin-top:14px; padding-left:15px; font-size:11.5px;

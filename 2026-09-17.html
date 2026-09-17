@@ -92,13 +92,17 @@ article .num{
 }
 article.p-must .num{border-color:var(--must); color:var(--must);}
 article.p-fyi .num{border-color:var(--fyi); color:var(--fyi);}
-a.save{
+button.save{
   display:inline-flex; align-items:center; gap:5px;
-  padding:5px 11px; border:1px solid var(--accent); border-radius:3px;
-  color:var(--accent); text-decoration:none; font-size:11.5px; letter-spacing:.03em;
+  padding:6px 12px; border:1px solid var(--accent); border-radius:3px;
+  background:transparent; color:var(--accent); cursor:pointer;
+  font-family:inherit; font-size:11.5px; letter-spacing:.03em; line-height:1.4;
 }
-a.save:hover{background:var(--accent); color:var(--paper);}
-a.save:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+button.save:hover:not(:disabled){background:var(--accent); color:var(--paper);}
+button.save:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+button.save:disabled{cursor:default;}
+button.save.done{border-color:var(--rule-hard); color:var(--ink-soft); background:transparent;}
+button.save.failed{border-color:var(--must); color:var(--must);}
 article footer{
   display:flex; flex-wrap:wrap; gap:8px 14px; align-items:baseline;
   margin-top:14px; padding-left:15px; font-size:11.5px;
@@ -143,9 +147,42 @@ nav.crumb a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
 </div></header>
 <nav class="crumb mono"><a href="./archive.html">過去号一覧 &rarr;</a></nav>
 <h2 class="band must">🔴 必読<span class="count mono">2</span></h2>
-<article class="p-must"><div class="eyebrow mono"><span class="j">Eur J Trauma Emerg Surg</span><span class="sep">/</span><span>多施設前向きコホートの事前規定年齢層別解析</span><span class="sep">/</span><span class="mono">n = 1,731例(うち65歳以上729例、42.1%)</span></div><h3 class="mincho"><span class="num mono">1</span>高齢の小腸閉塞は保存的治療の成功率は同等だが合併症・死亡は高率、年齢だけで判断しない</h3><p class="orig">Small bowel obstruction in older adults: similar nonoperative success but worse outcomes across management strategies - insights from the ESTES SnapSBO study.</p><ul class="findings"><li>高齢者は保存的治療の試行が少ない(67.9% vs 72.7%、絶対リスク差 -4.8%、P = 0.037)</li><li>保存的治療での解除率は同等(68.8% vs 69.5%)</li><li>合併症16.7% vs 6.7%、誤嚥性肺炎3.8% vs 1.0%、院内死亡6.9% vs 3.6%</li><li>80歳以上では管理内容は同様だが死亡・合併症が実質的に高率</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">高齢でも保存的治療の解除率は若年と同等であり、年齢を理由に非手術療法を控えるのではなく、原因・画像上の重症度・フレイル・生理的脆弱性で判断する。</dd><dt>限界</dt><dd class="lim">観察研究であり、治療選択の交絡や施設間差、フレイル評価の標準化不足は残る。</dd></dl><footer><span class="tags mono">#腸閉塞　#高齢者救急　#治療方針</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42714634/" target="_blank" rel="noopener">PubMed 42714634 &rarr;</a></footer></article>
-<article class="p-must"><div class="eyebrow mono"><span class="j">Front Endocrinol (Lausanne)</span><span class="sep">/</span><span>多施設後ろ向きコホート</span><span class="sep">/</span><span class="mono">n = 615例</span></div><h3 class="mincho"><span class="num mono">2</span>術前空腹時血糖が高いほど大腿骨近位部骨折術後1年の機能回復が不良と独立して関連</h3><p class="orig">Association of preoperative fasting blood glucose with 1-year Harris Hip Score after hip fracture in older adults: a multicenter retrospective cohort study.</p><ul class="findings"><li>完全調整モデルでFBG 1 mmol/L上昇ごとにHHS≥70達成のオッズが12%低下(OR 0.88、95% CI 0.80-0.96、P = 0.0036)</li><li>FBG &lt;6.1 mmol/Lと比べFBG ≥7.0 mmol/Lで良好な回復のオッズ低下(OR 0.60、95% CI 0.37-0.98、P = 0.0414)</li><li>三分位最高群 vs 最低群:OR 0.58、95% CI 0.34-1.00、P = 0.0485(線形トレンド有意)</li><li>施設調整後も連続変数の関連は有意(OR 0.89、95% CI 0.81-0.97、P = 0.0111)</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">術前空腹時血糖は大腿骨近位部骨折手術のリスク層別化・周術期計画の一助となりうる。</dd><dt>限界</dt><dd class="lim">後ろ向き観察研究で、血糖管理が機能予後を改善するかは不明、閾値ベースの結果は施設調整で減弱。</dd></dl><footer><span class="tags mono">#大腿骨近位部骨折　#周術期管理　#糖代謝</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42723963/" target="_blank" rel="noopener">PubMed 42723963 &rarr;</a></footer></article>
+<article class="p-must"><div class="eyebrow mono"><span class="j">Eur J Trauma Emerg Surg</span><span class="sep">/</span><span>多施設前向きコホートの事前規定年齢層別解析</span><span class="sep">/</span><span class="mono">n = 1,731例(うち65歳以上729例、42.1%)</span></div><h3 class="mincho"><span class="num mono">1</span>高齢の小腸閉塞は保存的治療の成功率は同等だが合併症・死亡は高率、年齢だけで判断しない</h3><p class="orig">Small bowel obstruction in older adults: similar nonoperative success but worse outcomes across management strategies - insights from the ESTES SnapSBO study.</p><ul class="findings"><li>高齢者は保存的治療の試行が少ない(67.9% vs 72.7%、絶対リスク差 -4.8%、P = 0.037)</li><li>保存的治療での解除率は同等(68.8% vs 69.5%)</li><li>合併症16.7% vs 6.7%、誤嚥性肺炎3.8% vs 1.0%、院内死亡6.9% vs 3.6%</li><li>80歳以上では管理内容は同様だが死亡・合併症が実質的に高率</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">高齢でも保存的治療の解除率は若年と同等であり、年齢を理由に非手術療法を控えるのではなく、原因・画像上の重症度・フレイル・生理的脆弱性で判断する。</dd><dt>限界</dt><dd class="lim">観察研究であり、治療選択の交絡や施設間差、フレイル評価の標準化不足は残る。</dd></dl><footer><button class="save mono" type="button" data-date="2026-09-17" data-pmid="42714634">📥 Notionに保存</button><span class="tags mono">#腸閉塞　#高齢者救急　#治療方針</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42714634/" target="_blank" rel="noopener">PubMed 42714634 &rarr;</a></footer></article>
+<article class="p-must"><div class="eyebrow mono"><span class="j">Front Endocrinol (Lausanne)</span><span class="sep">/</span><span>多施設後ろ向きコホート</span><span class="sep">/</span><span class="mono">n = 615例</span></div><h3 class="mincho"><span class="num mono">2</span>術前空腹時血糖が高いほど大腿骨近位部骨折術後1年の機能回復が不良と独立して関連</h3><p class="orig">Association of preoperative fasting blood glucose with 1-year Harris Hip Score after hip fracture in older adults: a multicenter retrospective cohort study.</p><ul class="findings"><li>完全調整モデルでFBG 1 mmol/L上昇ごとにHHS≥70達成のオッズが12%低下(OR 0.88、95% CI 0.80-0.96、P = 0.0036)</li><li>FBG &lt;6.1 mmol/Lと比べFBG ≥7.0 mmol/Lで良好な回復のオッズ低下(OR 0.60、95% CI 0.37-0.98、P = 0.0414)</li><li>三分位最高群 vs 最低群:OR 0.58、95% CI 0.34-1.00、P = 0.0485(線形トレンド有意)</li><li>施設調整後も連続変数の関連は有意(OR 0.89、95% CI 0.81-0.97、P = 0.0111)</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">術前空腹時血糖は大腿骨近位部骨折手術のリスク層別化・周術期計画の一助となりうる。</dd><dt>限界</dt><dd class="lim">後ろ向き観察研究で、血糖管理が機能予後を改善するかは不明、閾値ベースの結果は施設調整で減弱。</dd></dl><footer><button class="save mono" type="button" data-date="2026-09-17" data-pmid="42723963">📥 Notionに保存</button><span class="tags mono">#大腿骨近位部骨折　#周術期管理　#糖代謝</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42723963/" target="_blank" rel="noopener">PubMed 42723963 &rarr;</a></footer></article>
 <h2 class="band fyi">🟡 参考<span class="count mono">2</span></h2>
-<article class="p-fyi"><div class="eyebrow mono"><span class="j">BMC Geriatr</span><span class="sep">/</span><span>多施設前向きコホート(18か月追跡)</span><span class="sep">/</span><span class="mono">n = 1,072例</span></div><h3 class="mincho"><span class="num mono">3</span>75歳以上の機能・QOLはコロナ後18か月で緩やかに低下、感染既往との関連は不安以外なし</h3><p class="orig">Evolution of functional and mental status and quality of life in people aged 75 years and over after the COVID-19 pandemic in Spain: a prospective cohort study.</p><ul class="findings"><li>コホート全体で機能、栄養状態、社会的支援、QOLの多くの領域が経時的に有意に悪化</li><li>感染既往の有無で軌跡はおおむね平行で、一貫した曝露×時間の交互作用なし</li><li>例外は不安(p = 0.043)で経時的に異なるパターンを示した</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">高齢者の機能低下は感染既往よりも全体的な加齢・社会的文脈に起因しうるため、感染既往者では特に情動面のフォローを重点化する。</dd><dt>限界</dt><dd class="lim">観察研究で感染の把握は診療記録依存、未診断感染や脱落の影響を否定できない。</dd></dl><footer><span class="tags mono">#COVID-19　#高齢者機能低下　#QOL</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42701179/" target="_blank" rel="noopener">PubMed 42701179 &rarr;</a></footer></article>
-<article class="p-fyi"><div class="eyebrow mono"><span class="j">Int J Mol Sci</span><span class="sep">/</span><span>RCTのみを対象としたシステマティックレビュー(定量的統合なし)</span><span class="sep">/</span><span class="mono">n = RCT 3件、計約208例</span></div><h3 class="mincho"><span class="num mono">4</span>間葉系幹細胞療法はフレイル高齢者で忍容性良好、移動能力改善は示唆にとどまる</h3><p class="orig">Safety and Efficacy of Mesenchymal Stem Cell Therapy in Aging Frailty: A Systematic Review.</p><ul class="findings"><li>治療関連の重篤な有害事象の報告なし</li><li>1試験で9か月時点の6分間歩行距離に用量依存的な増加</li><li>他の試験でSPPB、TUG、握力の改善を報告</li><li>QOL改善、炎症性サイトカイン低下、循環sTIE2の用量依存的低下と関連</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">フレイルに対する静注MSC療法は安全性シグナルとしては良好だが、現時点では標準診療に組み込む段階ではない。</dd><dt>限界</dt><dd class="lim">試験数が3件と少なく、細胞源・用量・評価項目・追跡期間が不均一でメタ解析は実施できていない。</dd></dl><footer><span class="tags mono">#フレイル　#再生医療</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42737497/" target="_blank" rel="noopener">PubMed 42737497 &rarr;</a></footer></article>
-<div class="colophon"><span class="line">出典 PubMed / 取得窓 直近14日（PubMed登録日）・既配信は除外済み。</span><span class="line">数値は抄録の記載をそのまま写している。判断の前に必ず原著にあたること。</span></div></div></body></html>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">BMC Geriatr</span><span class="sep">/</span><span>多施設前向きコホート(18か月追跡)</span><span class="sep">/</span><span class="mono">n = 1,072例</span></div><h3 class="mincho"><span class="num mono">3</span>75歳以上の機能・QOLはコロナ後18か月で緩やかに低下、感染既往との関連は不安以外なし</h3><p class="orig">Evolution of functional and mental status and quality of life in people aged 75 years and over after the COVID-19 pandemic in Spain: a prospective cohort study.</p><ul class="findings"><li>コホート全体で機能、栄養状態、社会的支援、QOLの多くの領域が経時的に有意に悪化</li><li>感染既往の有無で軌跡はおおむね平行で、一貫した曝露×時間の交互作用なし</li><li>例外は不安(p = 0.043)で経時的に異なるパターンを示した</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">高齢者の機能低下は感染既往よりも全体的な加齢・社会的文脈に起因しうるため、感染既往者では特に情動面のフォローを重点化する。</dd><dt>限界</dt><dd class="lim">観察研究で感染の把握は診療記録依存、未診断感染や脱落の影響を否定できない。</dd></dl><footer><button class="save mono" type="button" data-date="2026-09-17" data-pmid="42701179">📥 Notionに保存</button><span class="tags mono">#COVID-19　#高齢者機能低下　#QOL</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42701179/" target="_blank" rel="noopener">PubMed 42701179 &rarr;</a></footer></article>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">Int J Mol Sci</span><span class="sep">/</span><span>RCTのみを対象としたシステマティックレビュー(定量的統合なし)</span><span class="sep">/</span><span class="mono">n = RCT 3件、計約208例</span></div><h3 class="mincho"><span class="num mono">4</span>間葉系幹細胞療法はフレイル高齢者で忍容性良好、移動能力改善は示唆にとどまる</h3><p class="orig">Safety and Efficacy of Mesenchymal Stem Cell Therapy in Aging Frailty: A Systematic Review.</p><ul class="findings"><li>治療関連の重篤な有害事象の報告なし</li><li>1試験で9か月時点の6分間歩行距離に用量依存的な増加</li><li>他の試験でSPPB、TUG、握力の改善を報告</li><li>QOL改善、炎症性サイトカイン低下、循環sTIE2の用量依存的低下と関連</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">フレイルに対する静注MSC療法は安全性シグナルとしては良好だが、現時点では標準診療に組み込む段階ではない。</dd><dt>限界</dt><dd class="lim">試験数が3件と少なく、細胞源・用量・評価項目・追跡期間が不均一でメタ解析は実施できていない。</dd></dl><footer><button class="save mono" type="button" data-date="2026-09-17" data-pmid="42737497">📥 Notionに保存</button><span class="tags mono">#フレイル　#再生医療</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42737497/" target="_blank" rel="noopener">PubMed 42737497 &rarr;</a></footer></article>
+<div class="colophon"><span class="line">出典 PubMed / 取得窓 直近14日（PubMed登録日）・既配信は除外済み。</span><span class="line">数値は抄録の記載をそのまま写している。判断の前に必ず原著にあたること。</span></div></div>
+<script>
+(function(){
+  var W = "https://pubmed-inbox.okystthk.workers.dev";
+  document.addEventListener('click', function(ev){
+    var b = ev.target.closest('button.save');
+    if(!b || b.disabled) return;
+    var prev = b.textContent;
+    b.disabled = true; b.textContent = '保存中…';
+    fetch(W + '/save', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({date: b.dataset.date, pmid: b.dataset.pmid})
+    }).then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function(){
+        b.textContent = '✓ 保存済み'; b.classList.add('done');
+        try{ localStorage.setItem('saved:'+b.dataset.date+':'+b.dataset.pmid,'1'); }catch(e){}
+      })
+      .catch(function(){
+        b.disabled = false; b.textContent = prev;
+        b.classList.add('failed');
+        setTimeout(function(){ b.classList.remove('failed'); }, 2000);
+      });
+  });
+  // 同じ端末で押した分は、開き直しても「保存済み」のまま見える
+  try{
+    document.querySelectorAll('button.save').forEach(function(b){
+      if(localStorage.getItem('saved:'+b.dataset.date+':'+b.dataset.pmid)){
+        b.disabled = true; b.textContent = '✓ 保存済み'; b.classList.add('done');
+      }
+    });
+  }catch(e){}
+})();
+</script>
+</body></html>
