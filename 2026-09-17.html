@@ -166,7 +166,7 @@ nav.crumb a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
       body: JSON.stringify({date: b.dataset.date, pmid: b.dataset.pmid})
     }).then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
       .then(function(){
-        b.textContent = '✓ 保存済み'; b.classList.add('done');
+        b.textContent = '✓ 保存待ち（数分でNotionへ）'; b.classList.add('done');
         try{ localStorage.setItem('saved:'+b.dataset.date+':'+b.dataset.pmid,'1'); }catch(e){}
       })
       .catch(function(){
