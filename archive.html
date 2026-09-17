@@ -1,0 +1,132 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex, nofollow"><title>PubMed 朝刊 過去号</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F6F7F9; --panel:#FFFFFF; --ink:#15181C; --ink-soft:#4E5966;
+  --rule:#D5DAE1; --rule-hard:#A9B2BE;
+  --accent:#1B5E8C; --must:#A8271F; --fyi:#7A5A10;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#101317; --panel:#161A20; --ink:#E6EAEF; --ink-soft:#97A2AF;
+    --rule:#262C34; --rule-hard:#3A424D;
+    --accent:#7FB6DC; --must:#E8867D; --fyi:#D7B15F;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#101317; --panel:#161A20; --ink:#E6EAEF; --ink-soft:#97A2AF;
+  --rule:#262C34; --rule-hard:#3A424D;
+  --accent:#7FB6DC; --must:#E8867D; --fyi:#D7B15F;
+}
+body{
+  background:var(--paper); color:var(--ink); margin:0;
+  padding-inline:16px; padding-block:0 56px;
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic","Noto Sans JP",system-ui,sans-serif;
+  font-size:15px; line-height:1.75; -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:660px; margin-inline:auto;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace; font-variant-numeric:tabular-nums;}
+.mincho{font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",Georgia,serif;}
+
+/* 題字 */
+header.nameplate{padding-block:28px 14px; border-bottom:2px solid var(--rule-hard);}
+.nameplate h1{
+  margin:0; font-size:34px; line-height:1.15; font-weight:600; letter-spacing:.06em;
+  text-wrap:balance;
+}
+.nameplate .sub{
+  display:flex; flex-wrap:wrap; gap:6px 14px; align-items:baseline;
+  margin-top:10px; font-size:12px; letter-spacing:.08em; color:var(--ink-soft); text-transform:uppercase;
+}
+.nameplate .sub .scope{text-transform:none; letter-spacing:.02em;}
+
+/* 節見出し */
+h2.band{
+  display:flex; align-items:baseline; gap:10px;
+  margin:34px 0 0; padding-bottom:6px; border-bottom:1px solid var(--rule-hard);
+  font-size:13px; letter-spacing:.14em; font-weight:700;
+}
+h2.band .count{margin-left:auto; font-size:11px; font-weight:400; color:var(--ink-soft);}
+h2.must{color:var(--must);} h2.fyi{color:var(--fyi);}
+
+/* 記事 */
+article{padding-block:20px; border-bottom:1px solid var(--rule);}
+article .eyebrow{
+  display:flex; flex-wrap:wrap; gap:4px 10px; align-items:baseline;
+  font-size:11.5px; letter-spacing:.04em; color:var(--ink-soft);
+}
+article .eyebrow .j{color:var(--accent); font-weight:600;}
+article .eyebrow .sep{color:var(--rule-hard);}
+article h3{
+  margin:7px 0 0; font-size:20px; line-height:1.5; font-weight:600;
+  text-wrap:balance; border-left:3px solid var(--rule-hard); padding-left:12px;
+}
+article.p-must h3{border-left-color:var(--must);}
+article.p-fyi h3{border-left-color:var(--fyi);}
+article .orig{margin:8px 0 0; padding-left:15px; font-size:12px; line-height:1.6; color:var(--ink-soft);}
+
+ul.findings{margin:14px 0 0; padding:0 0 0 15px; list-style:none; display:flex; flex-direction:column; gap:5px;}
+ul.findings li{
+  position:relative; padding-left:16px; font-size:14px; line-height:1.7;
+  font-variant-numeric:tabular-nums;
+}
+ul.findings li::before{
+  content:""; position:absolute; left:2px; top:.72em;
+  width:5px; height:5px; background:var(--rule-hard);
+}
+
+dl.notes{margin:14px 0 0; padding-left:15px; display:grid; grid-template-columns:auto 1fr; gap:6px 10px; font-size:13.5px;}
+dl.notes dt{
+  font-size:10.5px; letter-spacing:.1em; font-weight:700; color:var(--ink-soft);
+  white-space:nowrap; padding-top:.4em;
+}
+dl.notes dd{margin:0; line-height:1.7;}
+dl.notes .imp{color:var(--ink);}
+dl.notes .lim{color:var(--ink-soft);}
+
+article footer{
+  display:flex; flex-wrap:wrap; gap:8px 14px; align-items:baseline;
+  margin-top:14px; padding-left:15px; font-size:11.5px;
+}
+article footer .tags{color:var(--ink-soft); letter-spacing:.03em;}
+article footer a{color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:1px;}
+article footer a:hover{background:color-mix(in srgb, var(--accent) 12%, transparent);}
+article footer a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+
+.colophon{margin-top:26px; font-size:11.5px; line-height:1.9; color:var(--ink-soft);}
+.colophon .line{display:block;}
+/* 過去号一覧 */
+ol.issues{margin:0; padding:0; list-style:none;}
+ol.issues li{border-bottom:1px solid var(--rule);}
+ol.issues a{
+  display:flex; flex-wrap:wrap; gap:4px 14px; align-items:baseline;
+  padding-block:15px; color:inherit; text-decoration:none;
+}
+ol.issues a:hover{background:color-mix(in srgb, var(--accent) 7%, transparent);}
+ol.issues a:focus-visible{outline:2px solid var(--accent); outline-offset:-2px;}
+ol.issues .d{font-size:14px; letter-spacing:.04em; color:var(--accent); font-weight:600;}
+ol.issues .c{font-size:11.5px; color:var(--ink-soft); margin-left:auto;}
+ol.issues .h{flex-basis:100%; font-size:13.5px; line-height:1.6; color:var(--ink-soft);}
+nav.crumb{padding-block:14px 0; font-size:12px;}
+nav.crumb a{color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor;}
+nav.crumb a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+.empty{margin-top:40px; padding:28px 0; border-block:1px solid var(--rule); text-align:center; color:var(--ink-soft);}
+@media (max-width:420px){
+  .nameplate h1{font-size:27px;}
+  article h3{font-size:18px;}
+  dl.notes{grid-template-columns:1fr; gap:2px;}
+  dl.notes dt{padding-top:.5em;}
+}
+</style>
+</head><body><div class="wrap">
+<header class="nameplate">
+<h1 class="mincho">PubMed 朝刊</h1>
+<div class="sub mono">
+<span>過去号 1 号</span>
+<span class="scope">高齢者救急・急性期</span>
+</div></header>
+<nav class="crumb mono"><a href="./">&larr; 最新号</a></nav>
+<ol class="issues">
+<li><a href="./2026-09-17.html"><span class="d mono">2026-09-17</span><span class="c mono">必読 3 / 全 8</span><span class="h">術前からの抑うつ・不安介入で術後3か月のPHQ-ADSが有意に改善</span></a></li>
+</ol>
+</div></body></html>

@@ -1,0 +1,140 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex, nofollow"><title>PubMed 朝刊 2026-09-17</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F6F7F9; --panel:#FFFFFF; --ink:#15181C; --ink-soft:#4E5966;
+  --rule:#D5DAE1; --rule-hard:#A9B2BE;
+  --accent:#1B5E8C; --must:#A8271F; --fyi:#7A5A10;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#101317; --panel:#161A20; --ink:#E6EAEF; --ink-soft:#97A2AF;
+    --rule:#262C34; --rule-hard:#3A424D;
+    --accent:#7FB6DC; --must:#E8867D; --fyi:#D7B15F;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#101317; --panel:#161A20; --ink:#E6EAEF; --ink-soft:#97A2AF;
+  --rule:#262C34; --rule-hard:#3A424D;
+  --accent:#7FB6DC; --must:#E8867D; --fyi:#D7B15F;
+}
+body{
+  background:var(--paper); color:var(--ink); margin:0;
+  padding-inline:16px; padding-block:0 56px;
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic","Noto Sans JP",system-ui,sans-serif;
+  font-size:15px; line-height:1.75; -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:660px; margin-inline:auto;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace; font-variant-numeric:tabular-nums;}
+.mincho{font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",Georgia,serif;}
+
+/* 題字 */
+header.nameplate{padding-block:28px 14px; border-bottom:2px solid var(--rule-hard);}
+.nameplate h1{
+  margin:0; font-size:34px; line-height:1.15; font-weight:600; letter-spacing:.06em;
+  text-wrap:balance;
+}
+.nameplate .sub{
+  display:flex; flex-wrap:wrap; gap:6px 14px; align-items:baseline;
+  margin-top:10px; font-size:12px; letter-spacing:.08em; color:var(--ink-soft); text-transform:uppercase;
+}
+.nameplate .sub .scope{text-transform:none; letter-spacing:.02em;}
+
+/* 節見出し */
+h2.band{
+  display:flex; align-items:baseline; gap:10px;
+  margin:34px 0 0; padding-bottom:6px; border-bottom:1px solid var(--rule-hard);
+  font-size:13px; letter-spacing:.14em; font-weight:700;
+}
+h2.band .count{margin-left:auto; font-size:11px; font-weight:400; color:var(--ink-soft);}
+h2.must{color:var(--must);} h2.fyi{color:var(--fyi);}
+
+/* 記事 */
+article{padding-block:20px; border-bottom:1px solid var(--rule);}
+article .eyebrow{
+  display:flex; flex-wrap:wrap; gap:4px 10px; align-items:baseline;
+  font-size:11.5px; letter-spacing:.04em; color:var(--ink-soft);
+}
+article .eyebrow .j{color:var(--accent); font-weight:600;}
+article .eyebrow .sep{color:var(--rule-hard);}
+article h3{
+  margin:7px 0 0; font-size:20px; line-height:1.5; font-weight:600;
+  text-wrap:balance; border-left:3px solid var(--rule-hard); padding-left:12px;
+}
+article.p-must h3{border-left-color:var(--must);}
+article.p-fyi h3{border-left-color:var(--fyi);}
+article .orig{margin:8px 0 0; padding-left:15px; font-size:12px; line-height:1.6; color:var(--ink-soft);}
+
+ul.findings{margin:14px 0 0; padding:0 0 0 15px; list-style:none; display:flex; flex-direction:column; gap:5px;}
+ul.findings li{
+  position:relative; padding-left:16px; font-size:14px; line-height:1.7;
+  font-variant-numeric:tabular-nums;
+}
+ul.findings li::before{
+  content:""; position:absolute; left:2px; top:.72em;
+  width:5px; height:5px; background:var(--rule-hard);
+}
+
+dl.notes{margin:14px 0 0; padding-left:15px; display:grid; grid-template-columns:auto 1fr; gap:6px 10px; font-size:13.5px;}
+dl.notes dt{
+  font-size:10.5px; letter-spacing:.1em; font-weight:700; color:var(--ink-soft);
+  white-space:nowrap; padding-top:.4em;
+}
+dl.notes dd{margin:0; line-height:1.7;}
+dl.notes .imp{color:var(--ink);}
+dl.notes .lim{color:var(--ink-soft);}
+
+article footer{
+  display:flex; flex-wrap:wrap; gap:8px 14px; align-items:baseline;
+  margin-top:14px; padding-left:15px; font-size:11.5px;
+}
+article footer .tags{color:var(--ink-soft); letter-spacing:.03em;}
+article footer a{color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:1px;}
+article footer a:hover{background:color-mix(in srgb, var(--accent) 12%, transparent);}
+article footer a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+
+.colophon{margin-top:26px; font-size:11.5px; line-height:1.9; color:var(--ink-soft);}
+.colophon .line{display:block;}
+/* 過去号一覧 */
+ol.issues{margin:0; padding:0; list-style:none;}
+ol.issues li{border-bottom:1px solid var(--rule);}
+ol.issues a{
+  display:flex; flex-wrap:wrap; gap:4px 14px; align-items:baseline;
+  padding-block:15px; color:inherit; text-decoration:none;
+}
+ol.issues a:hover{background:color-mix(in srgb, var(--accent) 7%, transparent);}
+ol.issues a:focus-visible{outline:2px solid var(--accent); outline-offset:-2px;}
+ol.issues .d{font-size:14px; letter-spacing:.04em; color:var(--accent); font-weight:600;}
+ol.issues .c{font-size:11.5px; color:var(--ink-soft); margin-left:auto;}
+ol.issues .h{flex-basis:100%; font-size:13.5px; line-height:1.6; color:var(--ink-soft);}
+nav.crumb{padding-block:14px 0; font-size:12px;}
+nav.crumb a{color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor;}
+nav.crumb a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+.empty{margin-top:40px; padding:28px 0; border-block:1px solid var(--rule); text-align:center; color:var(--ink-soft);}
+@media (max-width:420px){
+  .nameplate h1{font-size:27px;}
+  article h3{font-size:18px;}
+  dl.notes{grid-template-columns:1fr; gap:2px;}
+  dl.notes dt{padding-top:.5em;}
+}
+</style>
+</head><body><div class="wrap">
+<header class="nameplate">
+<h1 class="mincho">PubMed 朝刊</h1>
+<div class="sub mono">
+<span>2026-09-17</span>
+<span>採用 8 件 / 見送り 7 件</span>
+<span class="scope">高齢者救急・急性期</span>
+</div></header>
+<nav class="crumb mono"><a href="./archive.html">過去号一覧 &rarr;</a></nav>
+<h2 class="band must">🔴 必読<span class="count mono">3</span></h2>
+<article class="p-must"><div class="eyebrow mono"><span class="j">JAMA Netw Open</span><span class="sep">/</span><span>単盲検RCT(hybrid type 1 effectiveness-implementation試験)</span><span class="sep">/</span><span class="mono">n = 306</span></div><h3 class="mincho">術前からの抑うつ・不安介入で術後3か月のPHQ-ADSが有意に改善</h3><p class="orig">Perioperative Depression and Anxiety Care in Older Patients: A Randomized Clinical Trial.</p><ul class="findings"><li>3か月後のPHQ-ADS変化の群間平均差 2.20(95%CI 0.16-4.24、P=.03)</li><li>がん手術サブグループ:平均差 4.93(95%CI 1.51-8.36、P=.005)</li><li>心臓手術:平均差 2.68(95%CI -0.98 to 6.35、P=.15)</li><li>整形外科手術:平均差 -1.11(95%CI -4.62 to 2.40、P=.54)</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">60歳以上でPHQ-ADS上昇のある術前患者には、心理的管理と薬物調整をセットで術前から介入する価値がある(効果はがん手術で最大)。</dd><dt>限界</dt><dd class="lim">単一医療ネットワークの単盲検試験で、3159例のスクリーニングから326例のみ登録と選択バイアスが大きく、追跡は3か月まで。</dd></dl><footer><span class="tags mono">#周術期　#抑うつ・不安　#高齢者手術</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42714910/" target="_blank" rel="noopener">PubMed 42714910 &rarr;</a></footer></article>
+<article class="p-must"><div class="eyebrow mono"><span class="j">BMC Geriatr</span><span class="sep">/</span><span>単施設RCT(評価者盲検、intention-to-treat)</span><span class="sep">/</span><span class="mono">n = 80</span></div><h3 class="mincho">フレイル男性の前立腺全摘、術前在宅プレハビリで6分間歩行が30.8m改善</h3><p class="orig">Short-term home-based multimodal prehabilitation for perioperative functional recovery in prefrail and frail older men undergoing radical prostatectomy: a randomized controlled trial.</p><ul class="findings"><li>6MWT変化:介入群 +27.70±16.86 m、通常ケア群 -3.12±3.62 m</li><li>群間差 30.82 m(95%CI 25.32-36.33、P&lt;0.001)</li><li>プレハビリ期間の中央値 12日、プログラム遂行率は平均79.3%</li><li>介入関連有害事象の報告なし</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">待機期間が2週間程度しかなくても、在宅の運動・栄養・心理・骨盤底/呼吸訓練の多面的プレハビリで術前体力を上げられる。</dd><dt>限界</dt><dd class="lim">単施設80例で、早期離床や在院日数短縮は探索的評価にとどまり、追跡も術後4週まで。</dd></dl><footer><span class="tags mono">#フレイル　#プレハビリテーション　#周術期</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42736541/" target="_blank" rel="noopener">PubMed 42736541 &rarr;</a></footer></article>
+<article class="p-must"><div class="eyebrow mono"><span class="j">Age Ageing</span><span class="sep">/</span><span>システマティックレビュー・メタ解析(観察研究19件)</span><span class="sep">/</span><span class="mono">n = 19研究(20報告)</span></div><h3 class="mincho">転倒でED受診した高齢者は1年で41.3%が再受診、31.9%が再入院</h3><p class="orig">Emergency department revisits and hospital readmissions following a fall-related emergency department presentation in older adults: a systematic review and meta-analysis.</p><ul class="findings"><li>ED再受診の累積割合:3日 3.9%、7日 8.8%、30日 15.0%、90日 21.7%(単一研究)</li><li>ED再受診:6か月 37.5%、12か月 41.3%</li><li>再入院:30日 10.4%、6か月 30.4%、12か月 31.9%(単一研究)</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">転倒によるED受診は「帰宅可」でも終診にせず、転倒後フォロー枠として多面的評価と再発予防に載せる根拠になる。</dd><dt>限界</dt><dd class="lim">複数のプール解析で異質性が大きく、90日および12か月再入院は単一研究由来で推定が不安定。</dd></dl><footer><span class="tags mono">#転倒　#救急　#再入院</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42735386/" target="_blank" rel="noopener">PubMed 42735386 &rarr;</a></footer></article>
+<h2 class="band fyi">🟡 参考<span class="count mono">5</span></h2>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">Front Pharmacol</span><span class="sep">/</span><span>システマティックレビュー・メタ解析(RCT 15件)</span><span class="sep">/</span><span class="mono">n = 2,226</span></div><h3 class="mincho">レミマゾラムは術後せん妄を減らさず、早期の術後認知機能障害のみ改善の可能性</h3><p class="orig">The impact of remimazolam on postoperative neurocognitive disorder in elderly surgical patients: a systematic review and meta-analysis.</p><ul class="findings"><li>RCT 15件・計2,226例を統合</li><li>術後1日・3日のPOD発生率、せん妄のサブタイプ・持続期間に統計学的な有意差なし</li><li>術後1・3・5日の早期POCDリスク低下の可能性、7日目MMSEは高値</li><li>術中レミフェンタニル使用量、術中低血圧・徐脈の発生が減少。術後嘔気嘔吐・PACU滞在・在院日数に有意差なし</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">循環動態とオピオイド節減の面では選びやすい鎮静薬だが、「せん妄予防のために選ぶ」根拠は現時点でない。</dd><dt>限界</dt><dd class="lim">抄録に効果量・95%CIの記載がなく、比較対照となる鎮静薬が試験間で不均一。</dd></dl><footer><span class="tags mono">#術後せん妄　#麻酔・鎮静</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42707083/" target="_blank" rel="noopener">PubMed 42707083 &rarr;</a></footer></article>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">Age Ageing</span><span class="sep">/</span><span>システマティックレビュー・メタ解析(46研究、15地域)</span><span class="sep">/</span><span class="mono">n = 439,406</span></div><h3 class="mincho">入院関連機能低下は高齢入院患者の27%に発生、46研究43万人のメタ解析</h3><p class="orig">Prevalence and associated factors of hospitalisation-associated disability in older adults: a systematic review and meta-analysis.</p><ul class="findings"><li>HADのプール有病率 27%(95%CI 24%-31%)</li><li>個別研究の有病率は5%〜57%</li><li>95%予測区間 7%-48%</li><li>高い有病率:RCT、下気道感染症例、75-89歳、入院前ベースラインを用いた評価、modified Barthel indexによる評価</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">入院時点で「入院前ADL」を基準に評価を組み込み、4人に1人がADL低下して退院する前提で離床・リハ計画を立てる。</dd><dt>限界</dt><dd class="lim">予測区間が7-48%と極めて広く、HADの定義・評価尺度・ベースライン設定の違いが結果を大きく左右している。</dd></dl><footer><span class="tags mono">#入院関連機能低下　#ADL　#高齢入院患者</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42747824/" target="_blank" rel="noopener">PubMed 42747824 &rarr;</a></footer></article>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">J Coll Physicians Surg Pak</span><span class="sep">/</span><span>単施設横断研究(観察研究)</span><span class="sep">/</span><span class="mono">n = 134</span></div><h3 class="mincho">FRAILとSARC-CalFの併用が高齢者HFpEFの拾い上げに有用、AUC 0.88と0.89</h3><p class="orig">Relationship Between Comprehensive Geriatric Assessment and Heart Failure with Preserved Ejection Fraction in Elderly Patients.</p><ul class="findings"><li>HFpEF群 50例 vs 非HFpEF群 84例。HFpEF群は高齢でポリファーマシー負荷とFRAILスコアが高い(いずれもp&lt;0.05)</li><li>FRAILスコアのOR 3.68(95%CI 1.83-8.39)</li><li>SARC-CalFスコアのOR 1.47(95%CI 1.21-1.86)</li><li>AUC:FRAIL 0.88、SARC-CalF 0.89。最適カットオフは1.5点(プレフレイル)と11点</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">CGAの一部としてFRAILとSARC-CalFを取れば、HFpEFハイリスク者の一次スクリーニングに転用できる。</dd><dt>限界</dt><dd class="lim">単施設・半年間の横断研究で対照が「HFpEF以外の心不全」であり、因果関係も外部妥当性も未確認。</dd></dl><footer><span class="tags mono">#HFpEF　#フレイル　#サルコペニア</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42698238/" target="_blank" rel="noopener">PubMed 42698238 &rarr;</a></footer></article>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">J Infect Dev Ctries</span><span class="sep">/</span><span>単施設後ろ向きコホート</span><span class="sep">/</span><span class="mono">n = 122</span></div><h3 class="mincho">高齢者の市中グラム陰性菌敗血症は28日死亡37.7%、予後は宿主因子が規定</h3><p class="orig">A proposed management pathway for community-acquired Gram-negative sepsis in Chinese older adults.</p><ul class="findings"><li>グラム陰性菌が54.9%を占め、セフォペラゾン・スルバクタムへの感受性は85.0%</li><li>28日全死亡率 37.7%</li><li>死亡の独立予測因子:年齢1歳あたり aOR 1.10、ICU入室 aOR 6.65、人工呼吸 aOR 5.78、透析 aOR 3.62</li><li>適切な経験的抗菌薬治療は調整モデルで独立した保護因子ではなかった</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">地域の耐性パターンに応じたカルバペネム節減の経験的治療は成立しうるが、予後を分けるのは宿主因子であり臓器サポートの判断が要。</dd><dt>限界</dt><dd class="lim">上海の単施設122例の後ろ向き解析で、提案パスウェイ自体は未検証の仮説生成にとどまる(日本の耐性状況には直接当てはめられない)。</dd></dl><footer><span class="tags mono">#敗血症　#抗菌薬適正使用</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42715272/" target="_blank" rel="noopener">PubMed 42715272 &rarr;</a></footer></article>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">Respir Res</span><span class="sep">/</span><span>前向き観察研究(3シーズン、29外来施設)</span><span class="sep">/</span><span class="mono">n = 3,261(うちPCR確定RSV 192)</span></div><h3 class="mincho">60歳以上の外来ARIの5.9%がRSV、1エピソード社会的費用は平均510ユーロ</h3><p class="orig">The outpatient economic burden of respiratory syncytial virus infection in adults aged &gt;/= 60 years in Germany: results from the BUCOSS study.</p><ul class="findings"><li>ARI 3,261例中192例(5.9%)がPCR確定RSV。有病率5.49%、推定発生率は10万人あたり1,030.6例</li><li>1エピソードあたり社会的費用は平均€510.0(SD €742.58)で、60-64歳が最高</li><li>内訳は直接医療費€161.3(31.6%)、間接費€331.8(65.1%)、自己負担€16.9(3.3%)</li><li>約40%は研究定義のハイリスクに該当しない成人で発生</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">RSVの負担は入院例だけではなく、ハイリスク以外の60歳代にも及ぶため予防接種の対象設定を考える材料になる。</dd><dt>限界</dt><dd class="lim">ドイツの外来29施設のデータで費用構造は間接費(就労損失)依存が大きく、医療制度や就労率の異なる日本にはそのまま換算できない。</dd></dl><footer><span class="tags mono">#RSV　#ワクチン　#医療経済</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42702715/" target="_blank" rel="noopener">PubMed 42702715 &rarr;</a></footer></article>
+<div class="colophon"><span class="line">出典 PubMed / 取得窓 直近14日（PubMed登録日）・既配信は除外済み。</span><span class="line">数値は抄録の記載をそのまま写している。判断の前に必ず原著にあたること。</span></div></div></body></html>
