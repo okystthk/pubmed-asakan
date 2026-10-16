@@ -1,0 +1,186 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex, nofollow"><title>PubMed 朝刊 2026-10-17</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F6F7F9; --panel:#FFFFFF; --ink:#15181C; --ink-soft:#4E5966;
+  --rule:#D5DAE1; --rule-hard:#A9B2BE;
+  --accent:#1B5E8C; --must:#A8271F; --fyi:#7A5A10;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#101317; --panel:#161A20; --ink:#E6EAEF; --ink-soft:#97A2AF;
+    --rule:#262C34; --rule-hard:#3A424D;
+    --accent:#7FB6DC; --must:#E8867D; --fyi:#D7B15F;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#101317; --panel:#161A20; --ink:#E6EAEF; --ink-soft:#97A2AF;
+  --rule:#262C34; --rule-hard:#3A424D;
+  --accent:#7FB6DC; --must:#E8867D; --fyi:#D7B15F;
+}
+body{
+  background:var(--paper); color:var(--ink); margin:0;
+  padding-inline:16px; padding-block:0 56px;
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic","Noto Sans JP",system-ui,sans-serif;
+  font-size:15px; line-height:1.75; -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:660px; margin-inline:auto;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace; font-variant-numeric:tabular-nums;}
+.mincho{font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",Georgia,serif;}
+
+/* 題字 */
+header.nameplate{padding-block:28px 14px; border-bottom:2px solid var(--rule-hard);}
+.nameplate h1{
+  margin:0; font-size:34px; line-height:1.15; font-weight:600; letter-spacing:.06em;
+  text-wrap:balance;
+}
+.nameplate .sub{
+  display:flex; flex-wrap:wrap; gap:6px 14px; align-items:baseline;
+  margin-top:10px; font-size:12px; letter-spacing:.08em; color:var(--ink-soft); text-transform:uppercase;
+}
+.nameplate .sub .scope{text-transform:none; letter-spacing:.02em;}
+
+/* 節見出し */
+h2.band{
+  display:flex; align-items:baseline; gap:10px;
+  margin:34px 0 0; padding-bottom:6px; border-bottom:1px solid var(--rule-hard);
+  font-size:13px; letter-spacing:.14em; font-weight:700;
+}
+h2.band .count{margin-left:auto; font-size:11px; font-weight:400; color:var(--ink-soft);}
+h2.must{color:var(--must);} h2.fyi{color:var(--fyi);}
+
+/* 記事 */
+article{padding-block:20px; border-bottom:1px solid var(--rule);}
+article .eyebrow{
+  display:flex; flex-wrap:wrap; gap:4px 10px; align-items:baseline;
+  font-size:11.5px; letter-spacing:.04em; color:var(--ink-soft);
+}
+article .eyebrow .j{color:var(--accent); font-weight:600;}
+article .eyebrow .sep{color:var(--rule-hard);}
+article h3{
+  margin:7px 0 0; font-size:20px; line-height:1.5; font-weight:600;
+  text-wrap:balance; border-left:3px solid var(--rule-hard); padding-left:12px;
+}
+article.p-must h3{border-left-color:var(--must);}
+article.p-fyi h3{border-left-color:var(--fyi);}
+article .orig{margin:8px 0 0; padding-left:15px; font-size:12px; line-height:1.6; color:var(--ink-soft);}
+
+ul.findings{margin:14px 0 0; padding:0 0 0 15px; list-style:none; display:flex; flex-direction:column; gap:5px;}
+ul.findings li{
+  position:relative; padding-left:16px; font-size:14px; line-height:1.7;
+  font-variant-numeric:tabular-nums;
+}
+ul.findings li::before{
+  content:""; position:absolute; left:2px; top:.72em;
+  width:5px; height:5px; background:var(--rule-hard);
+}
+
+dl.notes{margin:14px 0 0; padding-left:15px; display:grid; grid-template-columns:auto 1fr; gap:6px 10px; font-size:13.5px;}
+dl.notes dt{
+  font-size:10.5px; letter-spacing:.1em; font-weight:700; color:var(--ink-soft);
+  white-space:nowrap; padding-top:.4em;
+}
+dl.notes dd{margin:0; line-height:1.7;}
+dl.notes .imp{color:var(--ink);}
+dl.notes .lim{color:var(--ink-soft);}
+
+article .num{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:22px; height:22px; margin-right:8px; padding:0 5px;
+  border:1px solid var(--rule-hard); border-radius:2px;
+  font-size:12px; font-weight:600; color:var(--ink-soft); vertical-align:2px;
+}
+article.p-must .num{border-color:var(--must); color:var(--must);}
+article.p-fyi .num{border-color:var(--fyi); color:var(--fyi);}
+button.save{
+  display:inline-flex; align-items:center; gap:5px;
+  padding:6px 12px; border:1px solid var(--accent); border-radius:3px;
+  background:transparent; color:var(--accent); cursor:pointer;
+  font-family:inherit; font-size:11.5px; letter-spacing:.03em; line-height:1.4;
+}
+button.save:hover:not(:disabled){background:var(--accent); color:var(--paper);}
+button.save:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+button.save:disabled{cursor:default;}
+button.save.done{border-color:var(--rule-hard); color:var(--ink-soft); background:transparent;}
+button.save.failed{border-color:var(--must); color:var(--must);}
+article footer{
+  display:flex; flex-wrap:wrap; gap:8px 14px; align-items:baseline;
+  margin-top:14px; padding-left:15px; font-size:11.5px;
+}
+article footer .tags{color:var(--ink-soft); letter-spacing:.03em; margin-left:auto;}
+article footer a{color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:1px;}
+article footer a:hover{background:color-mix(in srgb, var(--accent) 12%, transparent);}
+article footer a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+
+.colophon{margin-top:26px; font-size:11.5px; line-height:1.9; color:var(--ink-soft);}
+.colophon .line{display:block;}
+/* 過去号一覧 */
+ol.issues{margin:0; padding:0; list-style:none;}
+ol.issues li{border-bottom:1px solid var(--rule);}
+ol.issues a{
+  display:flex; flex-wrap:wrap; gap:4px 14px; align-items:baseline;
+  padding-block:15px; color:inherit; text-decoration:none;
+}
+ol.issues a:hover{background:color-mix(in srgb, var(--accent) 7%, transparent);}
+ol.issues a:focus-visible{outline:2px solid var(--accent); outline-offset:-2px;}
+ol.issues .d{font-size:14px; letter-spacing:.04em; color:var(--accent); font-weight:600;}
+ol.issues .c{font-size:11.5px; color:var(--ink-soft); margin-left:auto;}
+ol.issues .h{flex-basis:100%; font-size:13.5px; line-height:1.6; color:var(--ink-soft);}
+nav.crumb{padding-block:14px 0; font-size:12px;}
+nav.crumb a{color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor;}
+nav.crumb a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+.empty{margin-top:40px; padding:28px 0; border-block:1px solid var(--rule); text-align:center; color:var(--ink-soft);}
+@media (max-width:420px){
+  .nameplate h1{font-size:27px;}
+  article h3{font-size:18px;}
+  dl.notes{grid-template-columns:1fr; gap:2px;}
+  dl.notes dt{padding-top:.5em;}
+}
+</style>
+</head><body><div class="wrap">
+<header class="nameplate">
+<h1 class="mincho">PubMed 朝刊</h1>
+<div class="sub mono">
+<span>2026-10-17</span>
+<span>採用 3 件 / 見送り 10 件</span>
+<span class="scope">高齢者救急・急性期</span>
+</div></header>
+<nav class="crumb mono"><a href="./archive.html">過去号一覧 &rarr;</a></nav>
+<h2 class="band fyi">🟡 参考<span class="count mono">3</span></h2>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">Acta Orthop Belg</span><span class="sep">/</span><span>システマティックレビュー(7研究、主に観察研究)</span></div><h3 class="mincho"><span class="num mono">1</span>大腿骨近位部骨折術後の早期荷重は、死亡・在院日数・内科合併症の減少と関連した</h3><p class="orig">Weight-bearing impact after surgically treated proximal femur fracture in  patients aged 65 years and older: systematic review.</p><ul class="findings"><li>695件中7件が採用基準を満たした</li><li>早期荷重は死亡率低下・在院日数短縮・内科合併症減少・一部の機能転帰改善と関連し、整形外科的合併症の明らかな増加はなかった(効果量の記載なし)</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">65歳以上の術後大腿骨近位部骨折で、早期荷重を控える理由が乏しいことを支持する材料になる</dd><dt>限界</dt><dd class="lim">採用は7件のみで主に観察研究、異質性が大きく、因果関係は示せない。効果量の数値は抄録に無い</dd></dl><footer><button class="save mono" type="button" data-date="2026-10-17" data-pmid="42885462">📥 Notionに保存</button><span class="tags mono">#大腿骨近位部骨折　#早期離床　#リハビリテーション</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42885462/" target="_blank" rel="noopener">PubMed 42885462 &rarr;</a></footer></article>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">Drugs Aging</span><span class="sep">/</span><span>前向き観察研究の二次解析</span><span class="sep">/</span><span class="mono">n = 113</span></div><h3 class="mincho"><span class="num mono">2</span>急性期緩和ケア病棟で、高齢者は少ないオピオイド量でも若年者と同等の疼痛制御を得た</h3><p class="orig">Opioid Use in Older Adults with Cancer Pain Admitted to an Acute Palliative Care  Unit: Does Age Matter? A Secondary Analysis.</p><ul class="findings"><li>A: n = 46, O: n = 43, OO: n = 24</li><li>入院時の経口モルヒネ換算量に有意差なし(p = 0.177)</li><li>退院時の経口モルヒネ換算量の群間差が最大(p &lt; 0.001)。65歳未満で高く、65-75歳と75歳超の間に差なし</li><li>初回の突出痛レスキュー量も65歳未満で有意に高かった(p &lt; 0.05)</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">高齢のがん疼痛患者では、低めのオピオイド量から個別に漸増しても疼痛制御は損なわれにくい</dd><dt>限界</dt><dd class="lim">単施設の二次解析でn=113と小さく、75歳超は24例のみ。疼痛スコアの数値は抄録に無い</dd></dl><footer><button class="save mono" type="button" data-date="2026-10-17" data-pmid="42853544">📥 Notionに保存</button><span class="tags mono">#がん疼痛　#オピオイド　#緩和ケア</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42853544/" target="_blank" rel="noopener">PubMed 42853544 &rarr;</a></footer></article>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">BMC Med Inform Decis Mak</span><span class="sep">/</span><span>多施設後ろ向きコホート(予測モデルの開発と外部検証)</span><span class="sep">/</span><span class="mono">n = 開発1,717 / 外部検証533</span></div><h3 class="mincho"><span class="num mono">3</span>75歳以上のICU患者のDVTを予測する機械学習モデル、外部検証でAUC 0.811</h3><p class="orig">Interpretable machine learning model for early prediction of deep vein thrombosis  in elderly ICU patients: multicenter development and external validation.</p><ul class="findings"><li>DVT発症は開発コホート15.2%、外部検証コホート21.0%</li><li>XGBoostのAUCは内部検証0.843、外部検証0.811</li><li>主な予測因子はD-dimer、CRP、血小板/リンパ球比、プロカルシトニン、人工呼吸、機械的血栓予防</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">入室24時間以内の項目で高齢ICU患者のDVT高リスク群を拾える可能性があるが、まだ参考にとどまる</dd><dt>限界</dt><dd class="lim">中国の2施設の後ろ向きデータで、モデルを使うと転帰が改善するかは検証されていない</dd></dl><footer><button class="save mono" type="button" data-date="2026-10-17" data-pmid="42881451">📥 Notionに保存</button><span class="tags mono">#深部静脈血栓症　#ICU　#予測モデル</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/42881451/" target="_blank" rel="noopener">PubMed 42881451 &rarr;</a></footer></article>
+<div class="colophon"><span class="line">出典 PubMed / 取得窓 直近14日（PubMed登録日）・既配信は除外済み。</span><span class="line">数値は抄録の記載をそのまま写している。判断の前に必ず原著にあたること。</span></div></div>
+<script>
+(function(){
+  var W = "https://pubmed-inbox.okystthk.workers.dev";
+  document.addEventListener('click', function(ev){
+    var b = ev.target.closest('button.save');
+    if(!b || b.disabled) return;
+    var prev = b.textContent;
+    b.disabled = true; b.textContent = '保存中…';
+    fetch(W + '/save', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({date: b.dataset.date, pmid: b.dataset.pmid})
+    }).then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function(){
+        b.textContent = '✓ 保存待ち（数分でNotionへ）'; b.classList.add('done');
+        try{ localStorage.setItem('saved:'+b.dataset.date+':'+b.dataset.pmid,'1'); }catch(e){}
+      })
+      .catch(function(){
+        b.disabled = false; b.textContent = prev;
+        b.classList.add('failed');
+        setTimeout(function(){ b.classList.remove('failed'); }, 2000);
+      });
+  });
+  // 同じ端末で押した分は、開き直しても「保存済み」のまま見える
+  try{
+    document.querySelectorAll('button.save').forEach(function(b){
+      if(localStorage.getItem('saved:'+b.dataset.date+':'+b.dataset.pmid)){
+        b.disabled = true; b.textContent = '✓ 保存済み'; b.classList.add('done');
+      }
+    });
+  }catch(e){}
+})();
+</script>
+</body></html>
