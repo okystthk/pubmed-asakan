@@ -1,0 +1,188 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex, nofollow"><title>PubMed 朝刊 2026-11-21</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F6F7F9; --panel:#FFFFFF; --ink:#15181C; --ink-soft:#4E5966;
+  --rule:#D5DAE1; --rule-hard:#A9B2BE;
+  --accent:#1B5E8C; --must:#A8271F; --fyi:#7A5A10;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#101317; --panel:#161A20; --ink:#E6EAEF; --ink-soft:#97A2AF;
+    --rule:#262C34; --rule-hard:#3A424D;
+    --accent:#7FB6DC; --must:#E8867D; --fyi:#D7B15F;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#101317; --panel:#161A20; --ink:#E6EAEF; --ink-soft:#97A2AF;
+  --rule:#262C34; --rule-hard:#3A424D;
+  --accent:#7FB6DC; --must:#E8867D; --fyi:#D7B15F;
+}
+body{
+  background:var(--paper); color:var(--ink); margin:0;
+  padding-inline:16px; padding-block:0 56px;
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic","Noto Sans JP",system-ui,sans-serif;
+  font-size:15px; line-height:1.75; -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:660px; margin-inline:auto;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace; font-variant-numeric:tabular-nums;}
+.mincho{font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",Georgia,serif;}
+
+/* 題字 */
+header.nameplate{padding-block:28px 14px; border-bottom:2px solid var(--rule-hard);}
+.nameplate h1{
+  margin:0; font-size:34px; line-height:1.15; font-weight:600; letter-spacing:.06em;
+  text-wrap:balance;
+}
+.nameplate .sub{
+  display:flex; flex-wrap:wrap; gap:6px 14px; align-items:baseline;
+  margin-top:10px; font-size:12px; letter-spacing:.08em; color:var(--ink-soft); text-transform:uppercase;
+}
+.nameplate .sub .scope{text-transform:none; letter-spacing:.02em;}
+
+/* 節見出し */
+h2.band{
+  display:flex; align-items:baseline; gap:10px;
+  margin:34px 0 0; padding-bottom:6px; border-bottom:1px solid var(--rule-hard);
+  font-size:13px; letter-spacing:.14em; font-weight:700;
+}
+h2.band .count{margin-left:auto; font-size:11px; font-weight:400; color:var(--ink-soft);}
+h2.must{color:var(--must);} h2.fyi{color:var(--fyi);}
+
+/* 記事 */
+article{padding-block:20px; border-bottom:1px solid var(--rule);}
+article .eyebrow{
+  display:flex; flex-wrap:wrap; gap:4px 10px; align-items:baseline;
+  font-size:11.5px; letter-spacing:.04em; color:var(--ink-soft);
+}
+article .eyebrow .j{color:var(--accent); font-weight:600;}
+article .eyebrow .sep{color:var(--rule-hard);}
+article h3{
+  margin:7px 0 0; font-size:20px; line-height:1.5; font-weight:600;
+  text-wrap:balance; border-left:3px solid var(--rule-hard); padding-left:12px;
+}
+article.p-must h3{border-left-color:var(--must);}
+article.p-fyi h3{border-left-color:var(--fyi);}
+article .orig{margin:8px 0 0; padding-left:15px; font-size:12px; line-height:1.6; color:var(--ink-soft);}
+
+ul.findings{margin:14px 0 0; padding:0 0 0 15px; list-style:none; display:flex; flex-direction:column; gap:5px;}
+ul.findings li{
+  position:relative; padding-left:16px; font-size:14px; line-height:1.7;
+  font-variant-numeric:tabular-nums;
+}
+ul.findings li::before{
+  content:""; position:absolute; left:2px; top:.72em;
+  width:5px; height:5px; background:var(--rule-hard);
+}
+
+dl.notes{margin:14px 0 0; padding-left:15px; display:grid; grid-template-columns:auto 1fr; gap:6px 10px; font-size:13.5px;}
+dl.notes dt{
+  font-size:10.5px; letter-spacing:.1em; font-weight:700; color:var(--ink-soft);
+  white-space:nowrap; padding-top:.4em;
+}
+dl.notes dd{margin:0; line-height:1.7;}
+dl.notes .imp{color:var(--ink);}
+dl.notes .lim{color:var(--ink-soft);}
+
+article .num{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:22px; height:22px; margin-right:8px; padding:0 5px;
+  border:1px solid var(--rule-hard); border-radius:2px;
+  font-size:12px; font-weight:600; color:var(--ink-soft); vertical-align:2px;
+}
+article.p-must .num{border-color:var(--must); color:var(--must);}
+article.p-fyi .num{border-color:var(--fyi); color:var(--fyi);}
+button.save{
+  display:inline-flex; align-items:center; gap:5px;
+  padding:6px 12px; border:1px solid var(--accent); border-radius:3px;
+  background:transparent; color:var(--accent); cursor:pointer;
+  font-family:inherit; font-size:11.5px; letter-spacing:.03em; line-height:1.4;
+}
+button.save:hover:not(:disabled){background:var(--accent); color:var(--paper);}
+button.save:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+button.save:disabled{cursor:default;}
+button.save.done{border-color:var(--rule-hard); color:var(--ink-soft); background:transparent;}
+button.save.failed{border-color:var(--must); color:var(--must);}
+article footer{
+  display:flex; flex-wrap:wrap; gap:8px 14px; align-items:baseline;
+  margin-top:14px; padding-left:15px; font-size:11.5px;
+}
+article footer .tags{color:var(--ink-soft); letter-spacing:.03em; margin-left:auto;}
+article footer a{color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:1px;}
+article footer a:hover{background:color-mix(in srgb, var(--accent) 12%, transparent);}
+article footer a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+
+.colophon{margin-top:26px; font-size:11.5px; line-height:1.9; color:var(--ink-soft);}
+.colophon .line{display:block;}
+/* 過去号一覧 */
+ol.issues{margin:0; padding:0; list-style:none;}
+ol.issues li{border-bottom:1px solid var(--rule);}
+ol.issues a{
+  display:flex; flex-wrap:wrap; gap:4px 14px; align-items:baseline;
+  padding-block:15px; color:inherit; text-decoration:none;
+}
+ol.issues a:hover{background:color-mix(in srgb, var(--accent) 7%, transparent);}
+ol.issues a:focus-visible{outline:2px solid var(--accent); outline-offset:-2px;}
+ol.issues .d{font-size:14px; letter-spacing:.04em; color:var(--accent); font-weight:600;}
+ol.issues .c{font-size:11.5px; color:var(--ink-soft); margin-left:auto;}
+ol.issues .h{flex-basis:100%; font-size:13.5px; line-height:1.6; color:var(--ink-soft);}
+nav.crumb{padding-block:14px 0; font-size:12px;}
+nav.crumb a{color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor;}
+nav.crumb a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+.empty{margin-top:40px; padding:28px 0; border-block:1px solid var(--rule); text-align:center; color:var(--ink-soft);}
+@media (max-width:420px){
+  .nameplate h1{font-size:27px;}
+  article h3{font-size:18px;}
+  dl.notes{grid-template-columns:1fr; gap:2px;}
+  dl.notes dt{padding-top:.5em;}
+}
+</style>
+</head><body><div class="wrap">
+<header class="nameplate">
+<h1 class="mincho">PubMed 朝刊</h1>
+<div class="sub mono">
+<span>2026-11-21</span>
+<span>採用 4 件 / 見送り 21 件</span>
+<span class="scope">高齢者救急・急性期</span>
+</div></header>
+<nav class="crumb mono"><a href="./archive.html">過去号一覧 &rarr;</a></nav>
+<h2 class="band must">🔴 必読<span class="count mono">1</span></h2>
+<article class="p-must"><div class="eyebrow mono"><span class="j">Support Care Cancer</span><span class="sep">/</span><span>単施設RCT</span><span class="sep">/</span><span class="mono">n = 76例（解析70例）</span></div><h3 class="mincho"><span class="num mono">1</span>高齢胃癌患者に術前6〜8日の院内プレハビリを行うと術後の6MWDが保たれ、合併症も少なかった</h3><p class="orig">Ultra-short-term in-hospital multimodal prehabilitation in older patients  undergoing laparoscopic gastrectomy for gastric cancer: a randomized controlled  trial.</p><ul class="findings"><li>術後28-35日のΔ6MWD: + 6.00 +/- 15.48 m vs. - 26.20 +/- 13.34 m（P &lt; 0.001）</li><li>術後合併症 11.8% vs. 38.9%（P = 0.009、探索的解析）。主に肺炎 8.8% vs. 30.6%</li><li>重症合併症（Clavien-Dindo grade &gt;/= III）2.9% vs. 8.3%（P = 0.615）</li><li>術後在院 10.06 +/- 2.97 vs. 13.31 +/- 6.34日（P = 0.008）、総在院日数は差なし（19.76 vs. 19.28日, P = 0.739）</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">待機手術前の入院期間が1週間ほどあれば、運動・栄養・心理の多面的介入で術後の機能を守れる可能性がある</dd><dt>限界</dt><dd class="lim">単施設で小規模。合併症は探索的評価で、回復指標は医療者を盲検化せずに評価。総在院日数は短縮しなかった</dd></dl><footer><button class="save mono" type="button" data-date="2026-11-21" data-pmid="43056003">📥 Notionに保存</button><span class="tags mono">#プレハビリテーション　#周術期　#フレイル</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/43056003/" target="_blank" rel="noopener">PubMed 43056003 &rarr;</a></footer></article>
+<h2 class="band fyi">🟡 参考<span class="count mono">3</span></h2>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">BMC Geriatr</span><span class="sep">/</span><span>多施設後ろ向きコホート（予測モデル開発・外部検証）</span><span class="sep">/</span><span class="mono">n = 開発96,871受診／外部検証35,361受診</span></div><h3 class="mincho"><span class="num mono">2</span>感染疑いでEDから病棟入院する高齢者の48時間以内の急変は、MLのほうがNEWSより予測できる</h3><p class="orig">Early prediction of clinical deterioration in older adults with suspected  infection admitted from the emergency department to general wards: a multicenter  machine learning study.</p><ul class="findings"><li>CatBoost AUROC 内部0.851、外部0.829</li><li>従来の早期警告スコア（NEWS, MEWS, mSOFA）は外部AUROC &lt;/= 0.70（all DeLong p &lt; 0.001）</li><li>CatBoost 外部AUPRC 0.134（イベント率ベースライン0.017）</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">感染疑いの高齢者では、NEWS/MEWSが低くても病棟入院後の急変リスクを見逃しうる。入院先を決めるときの注意点になる</dd><dt>限界</dt><dd class="lim">後ろ向き研究。前向きの実装評価はまだなく、AUPRCは0.134と絶対値が低い</dd></dl><footer><button class="save mono" type="button" data-date="2026-11-21" data-pmid="43058499">📥 Notionに保存</button><span class="tags mono">#早期警告スコア　#感染症　#救急</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/43058499/" target="_blank" rel="noopener">PubMed 43058499 &rarr;</a></footer></article>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">BMC Geriatr</span><span class="sep">/</span><span>前向き観察研究</span><span class="sep">/</span><span class="mono">n = 117</span></div><h3 class="mincho"><span class="num mono">3</span>重度フレイル入院高齢者の多職種による短期予後予測は正解率6割で、せん妄があると精度が落ちる</h3><p class="orig">Multidisciplinary prognostic accuracy in severe frailty: assessing short-term  survival predictions in hospitalized older adults.</p><ul class="findings"><li>多職種間の一致度: 1か月 kappa = 0.475、3か月 kappa = 0.528</li><li>全体の正解率 60.7%（log-rank p &lt; 0.001）</li><li>せん妄の併存で予測精度が低下（OR 0.38; 95% CI: 0.16-0.88）</li><li>死亡47例（40.2%）のうち30%はNECPALスクリーニング陰性</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">せん妄のある重度フレイル患者では、臨床医の見立てによる予後の見積もりを過信せず、ACPを前倒しで検討する</dd><dt>限界</dt><dd class="lim">単一の急性期老年病棟で症例数が少なく、予測ツールとしての検証はされていない</dd></dl><footer><button class="save mono" type="button" data-date="2026-11-21" data-pmid="43058506">📥 Notionに保存</button><span class="tags mono">#予後予測　#せん妄　#ACP</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/43058506/" target="_blank" rel="noopener">PubMed 43058506 &rarr;</a></footer></article>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">BMC Emerg Med</span><span class="sep">/</span><span>単施設 ambispective 観察研究</span><span class="sep">/</span><span class="mono">n = 360</span></div><h3 class="mincho"><span class="num mono">4</span>高齢外傷の院内死亡は11.7%で、ISS・GCS・脈拍・頸椎損傷が独立した予測因子だった</h3><p class="orig">Clinicoepidemiological profile and outcome of geriatric trauma in the emergency  department of tertiary care centre - an ambispective observational study.</p><ul class="findings"><li>院内死亡 11.7%（42/360）。死亡の83.3%が受傷後1週以内</li><li>ISS AOR 1.10（95% CI 1.05-1.16）、GCS AOR 0.71（95% CI 0.58-0.87）</li><li>脈拍 AOR 1.05（95% CI 1.002-1.093）</li><li>頸椎損傷 AOR 8.73（95% CI 1.1-68.5）</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">高齢外傷では、ベッドサイドで分かるISS・GCS・脈拍と頸椎損傷の有無で早期にリスクを分け、厳重に管理する</dd><dt>限界</dt><dd class="lim">インドの単施設で、交通外傷が主体。転倒が中心の日本の高齢外傷には当てはめにくい。頸椎損傷のCIが広い</dd></dl><footer><button class="save mono" type="button" data-date="2026-11-21" data-pmid="43058444">📥 Notionに保存</button><span class="tags mono">#外傷　#頭部外傷　#救急</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/43058444/" target="_blank" rel="noopener">PubMed 43058444 &rarr;</a></footer></article>
+<div class="colophon"><span class="line">出典 PubMed / 取得窓 直近14日（PubMed登録日）・既配信は除外済み。</span><span class="line">数値は抄録の記載をそのまま写している。判断の前に必ず原著にあたること。</span></div></div>
+<script>
+(function(){
+  var W = "https://pubmed-inbox.okystthk.workers.dev";
+  document.addEventListener('click', function(ev){
+    var b = ev.target.closest('button.save');
+    if(!b || b.disabled) return;
+    var prev = b.textContent;
+    b.disabled = true; b.textContent = '保存中…';
+    fetch(W + '/save', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({date: b.dataset.date, pmid: b.dataset.pmid})
+    }).then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function(){
+        b.textContent = '✓ 保存待ち（数分でNotionへ）'; b.classList.add('done');
+        try{ localStorage.setItem('saved:'+b.dataset.date+':'+b.dataset.pmid,'1'); }catch(e){}
+      })
+      .catch(function(){
+        b.disabled = false; b.textContent = prev;
+        b.classList.add('failed');
+        setTimeout(function(){ b.classList.remove('failed'); }, 2000);
+      });
+  });
+  // 同じ端末で押した分は、開き直しても「保存済み」のまま見える
+  try{
+    document.querySelectorAll('button.save').forEach(function(b){
+      if(localStorage.getItem('saved:'+b.dataset.date+':'+b.dataset.pmid)){
+        b.disabled = true; b.textContent = '✓ 保存済み'; b.classList.add('done');
+      }
+    });
+  }catch(e){}
+})();
+</script>
+</body></html>
