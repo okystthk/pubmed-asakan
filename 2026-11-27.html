@@ -1,0 +1,189 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex, nofollow"><title>PubMed 朝刊 2026-11-27</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#F6F7F9; --panel:#FFFFFF; --ink:#15181C; --ink-soft:#4E5966;
+  --rule:#D5DAE1; --rule-hard:#A9B2BE;
+  --accent:#1B5E8C; --must:#A8271F; --fyi:#7A5A10;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#101317; --panel:#161A20; --ink:#E6EAEF; --ink-soft:#97A2AF;
+    --rule:#262C34; --rule-hard:#3A424D;
+    --accent:#7FB6DC; --must:#E8867D; --fyi:#D7B15F;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#101317; --panel:#161A20; --ink:#E6EAEF; --ink-soft:#97A2AF;
+  --rule:#262C34; --rule-hard:#3A424D;
+  --accent:#7FB6DC; --must:#E8867D; --fyi:#D7B15F;
+}
+body{
+  background:var(--paper); color:var(--ink); margin:0;
+  padding-inline:16px; padding-block:0 56px;
+  font-family:"Hiragino Kaku Gothic ProN","Yu Gothic Medium","Yu Gothic","Noto Sans JP",system-ui,sans-serif;
+  font-size:15px; line-height:1.75; -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:660px; margin-inline:auto;}
+.mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace; font-variant-numeric:tabular-nums;}
+.mincho{font-family:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",Georgia,serif;}
+
+/* 題字 */
+header.nameplate{padding-block:28px 14px; border-bottom:2px solid var(--rule-hard);}
+.nameplate h1{
+  margin:0; font-size:34px; line-height:1.15; font-weight:600; letter-spacing:.06em;
+  text-wrap:balance;
+}
+.nameplate .sub{
+  display:flex; flex-wrap:wrap; gap:6px 14px; align-items:baseline;
+  margin-top:10px; font-size:12px; letter-spacing:.08em; color:var(--ink-soft); text-transform:uppercase;
+}
+.nameplate .sub .scope{text-transform:none; letter-spacing:.02em;}
+
+/* 節見出し */
+h2.band{
+  display:flex; align-items:baseline; gap:10px;
+  margin:34px 0 0; padding-bottom:6px; border-bottom:1px solid var(--rule-hard);
+  font-size:13px; letter-spacing:.14em; font-weight:700;
+}
+h2.band .count{margin-left:auto; font-size:11px; font-weight:400; color:var(--ink-soft);}
+h2.must{color:var(--must);} h2.fyi{color:var(--fyi);}
+
+/* 記事 */
+article{padding-block:20px; border-bottom:1px solid var(--rule);}
+article .eyebrow{
+  display:flex; flex-wrap:wrap; gap:4px 10px; align-items:baseline;
+  font-size:11.5px; letter-spacing:.04em; color:var(--ink-soft);
+}
+article .eyebrow .j{color:var(--accent); font-weight:600;}
+article .eyebrow .sep{color:var(--rule-hard);}
+article h3{
+  margin:7px 0 0; font-size:20px; line-height:1.5; font-weight:600;
+  text-wrap:balance; border-left:3px solid var(--rule-hard); padding-left:12px;
+}
+article.p-must h3{border-left-color:var(--must);}
+article.p-fyi h3{border-left-color:var(--fyi);}
+article .orig{margin:8px 0 0; padding-left:15px; font-size:12px; line-height:1.6; color:var(--ink-soft);}
+
+ul.findings{margin:14px 0 0; padding:0 0 0 15px; list-style:none; display:flex; flex-direction:column; gap:5px;}
+ul.findings li{
+  position:relative; padding-left:16px; font-size:14px; line-height:1.7;
+  font-variant-numeric:tabular-nums;
+}
+ul.findings li::before{
+  content:""; position:absolute; left:2px; top:.72em;
+  width:5px; height:5px; background:var(--rule-hard);
+}
+
+dl.notes{margin:14px 0 0; padding-left:15px; display:grid; grid-template-columns:auto 1fr; gap:6px 10px; font-size:13.5px;}
+dl.notes dt{
+  font-size:10.5px; letter-spacing:.1em; font-weight:700; color:var(--ink-soft);
+  white-space:nowrap; padding-top:.4em;
+}
+dl.notes dd{margin:0; line-height:1.7;}
+dl.notes .imp{color:var(--ink);}
+dl.notes .lim{color:var(--ink-soft);}
+
+article .num{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:22px; height:22px; margin-right:8px; padding:0 5px;
+  border:1px solid var(--rule-hard); border-radius:2px;
+  font-size:12px; font-weight:600; color:var(--ink-soft); vertical-align:2px;
+}
+article.p-must .num{border-color:var(--must); color:var(--must);}
+article.p-fyi .num{border-color:var(--fyi); color:var(--fyi);}
+button.save{
+  display:inline-flex; align-items:center; gap:5px;
+  padding:6px 12px; border:1px solid var(--accent); border-radius:3px;
+  background:transparent; color:var(--accent); cursor:pointer;
+  font-family:inherit; font-size:11.5px; letter-spacing:.03em; line-height:1.4;
+}
+button.save:hover:not(:disabled){background:var(--accent); color:var(--paper);}
+button.save:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+button.save:disabled{cursor:default;}
+button.save.done{border-color:var(--rule-hard); color:var(--ink-soft); background:transparent;}
+button.save.failed{border-color:var(--must); color:var(--must);}
+article footer{
+  display:flex; flex-wrap:wrap; gap:8px 14px; align-items:baseline;
+  margin-top:14px; padding-left:15px; font-size:11.5px;
+}
+article footer .tags{color:var(--ink-soft); letter-spacing:.03em; margin-left:auto;}
+article footer a{color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor; padding-bottom:1px;}
+article footer a:hover{background:color-mix(in srgb, var(--accent) 12%, transparent);}
+article footer a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+
+.colophon{margin-top:26px; font-size:11.5px; line-height:1.9; color:var(--ink-soft);}
+.colophon .line{display:block;}
+/* 過去号一覧 */
+ol.issues{margin:0; padding:0; list-style:none;}
+ol.issues li{border-bottom:1px solid var(--rule);}
+ol.issues a{
+  display:flex; flex-wrap:wrap; gap:4px 14px; align-items:baseline;
+  padding-block:15px; color:inherit; text-decoration:none;
+}
+ol.issues a:hover{background:color-mix(in srgb, var(--accent) 7%, transparent);}
+ol.issues a:focus-visible{outline:2px solid var(--accent); outline-offset:-2px;}
+ol.issues .d{font-size:14px; letter-spacing:.04em; color:var(--accent); font-weight:600;}
+ol.issues .c{font-size:11.5px; color:var(--ink-soft); margin-left:auto;}
+ol.issues .h{flex-basis:100%; font-size:13.5px; line-height:1.6; color:var(--ink-soft);}
+nav.crumb{padding-block:14px 0; font-size:12px;}
+nav.crumb a{color:var(--accent); text-decoration:none; border-bottom:1px solid currentColor;}
+nav.crumb a:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+.empty{margin-top:40px; padding:28px 0; border-block:1px solid var(--rule); text-align:center; color:var(--ink-soft);}
+@media (max-width:420px){
+  .nameplate h1{font-size:27px;}
+  article h3{font-size:18px;}
+  dl.notes{grid-template-columns:1fr; gap:2px;}
+  dl.notes dt{padding-top:.5em;}
+}
+</style>
+</head><body><div class="wrap">
+<header class="nameplate">
+<h1 class="mincho">PubMed 朝刊</h1>
+<div class="sub mono">
+<span>2026-11-27</span>
+<span>採用 5 件 / 見送り 23 件</span>
+<span class="scope">高齢者救急・急性期</span>
+</div></header>
+<nav class="crumb mono"><a href="./archive.html">過去号一覧 &rarr;</a></nav>
+<h2 class="band must">🔴 必読<span class="count mono">2</span></h2>
+<article class="p-must"><div class="eyebrow mono"><span class="j">Age Ageing</span><span class="sep">/</span><span>多施設二重盲検RCT(CHANCE-2)のサブグループ解析</span><span class="sep">/</span><span class="mono">n = 6412</span></div><h3 class="mincho"><span class="num mono">1</span>フレイル高度の軽症脳梗塞・TIAでは、チカグレロル併用の上乗せ効果が消える</h3><p class="orig">Ticagrelor-aspirin versus clopidogrel-aspirin by pre-onset frailty status: a  subgroup analysis of the CHANCE-2 trial.</p><ul class="findings"><li>新規脳卒中(90日): フレイル指数の第1三分位 HR 0.64 [95% CI, 0.45-0.90]</li><li>第2三分位 HR 0.68 [95% CI, 0.49-0.95]</li><li>第3三分位(最もフレイル) HR 1.05 [95% CI, 0.76-1.44]。治療×フレイルの交互作用は有意</li><li>重度・中等度出血は全三分位で両群同程度。交互作用なし</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">CYP2C19機能喪失型アレルを持つ軽症脳梗塞・TIAでは、チカグレロルを選ぶ前に発症前のフレイル評価を判断材料に加える</dd><dt>限界</dt><dd class="lim">事後のサブグループ解析で、対象は中国人の機能喪失型アレル保有者に限られる(年齢中央値64.8歳)</dd></dl><footer><button class="save mono" type="button" data-date="2026-11-27" data-pmid="43084504">📥 Notionに保存</button><span class="tags mono">#脳卒中　#抗血小板薬　#フレイル</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/43084504/" target="_blank" rel="noopener">PubMed 43084504 &rarr;</a></footer></article>
+<article class="p-must"><div class="eyebrow mono"><span class="j">Viruses</span><span class="sep">/</span><span>システマティックレビュー(RCTと比較観察研究、15報)</span></div><h3 class="mincho"><span class="num mono">2</span>高齢者のインフルエンザ入院を減らすRCT根拠が最も強いのは高用量ワクチン</h3><p class="orig">Enhanced Influenza Vaccines in Older Adults: A Systematic Review of High-Dose,  MF59-Adjuvanted, and mRNA-Based Vaccines.</p><ul class="findings"><li>高用量 vs 標準用量(GALFLU、DANFLU-2): 接種1000人あたりインフルエンザ入院が約0.4-0.5件少ない</li><li>INVESTED(心血管高リスク集団): 全死亡・心肺入院は減らず、HR 1.06; 95% CI 0.97-1.17</li><li>MF59アジュバント vs 標準用量(小規模test-negative研究): 調整相対VE 59.2%; 95% CI 14.6-80.5%</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">選ぶなら高用量ワクチンのRCT根拠が最も強い。ただしプラットフォーム間に確立した優劣はなく、どれでも接種すること自体を優先してよい</dd><dt>限界</dt><dd class="lim">研究デザインやエンドポイントの不均一が大きく、メタ解析をしていない。観察研究には残余交絡と集団の重複がある</dd></dl><footer><button class="save mono" type="button" data-date="2026-11-27" data-pmid="43093820">📥 Notionに保存</button><span class="tags mono">#インフルエンザワクチン　#予防接種</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/43093820/" target="_blank" rel="noopener">PubMed 43093820 &rarr;</a></footer></article>
+<h2 class="band fyi">🟡 参考<span class="count mono">3</span></h2>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">Indian J Tuberc</span><span class="sep">/</span><span>ガイドライン(インド結核協会)</span></div><h3 class="mincho"><span class="num mono">3</span>高齢者の結核は非典型的な症状で現れる。胸部X線が正常でも否定せず迅速分子診断へ</h3><p class="orig">Guidelines for management of tuberculosis in geriatric population in India: An  initiative by Tuberculosis Association of India.</p><ul class="findings"><li>数値の報告なし</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">食思不振・転倒・せん妄・機能低下から結核を疑い、胸部X線が正常でも分子診断を優先する。年齢だけを理由に減量しない</dd><dt>限界</dt><dd class="lim">インドの医療体制を前提とした提言で、推奨の根拠の強さが抄録に示されていない</dd></dl><footer><button class="save mono" type="button" data-date="2026-11-27" data-pmid="43085872">📥 Notionに保存</button><span class="tags mono">#結核　#ガイドライン　#非典型症状</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/43085872/" target="_blank" rel="noopener">PubMed 43085872 &rarr;</a></footer></article>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">Age Ageing</span><span class="sep">/</span><span>多国間縦断コホート(5コホート・16か国)</span><span class="sep">/</span><span class="mono">n = 45884</span></div><h3 class="mincho"><span class="num mono">4</span>人生のどの時期でも社会経済的地位が低いとフレイル発症リスクが1.5〜1.9倍</h3><p class="orig">The associations of lifecourse socioeconomic status with incident frailty and  successful ageing: a longitudinal multicohort study from 16 countries.</p><ul class="findings"><li>フレイル発症(低 vs 高SES): 小児期 HR 1.54 [1.45-1.64]、成人早期 1.86 [1.74-1.99]、成人後期 1.75 [1.67-1.85]</li><li>サクセスフル・エイジング: 成人早期 RR 0.82 [0.76-0.88]、成人後期 0.88 [0.82-0.93]</li><li>生活習慣が媒介した割合はSESとフレイルの関連の4.4-12.3%</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">生活習慣への介入だけでは社会経済格差によるフレイルリスクをほとんど埋められない。社会的背景をフレイルのリスク評価に含める</dd><dt>限界</dt><dd class="lim">観察研究で残余交絡がありうる。SESは教育歴と資産で代用している</dd></dl><footer><button class="save mono" type="button" data-date="2026-11-27" data-pmid="43084502">📥 Notionに保存</button><span class="tags mono">#フレイル　#社会的決定要因</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/43084502/" target="_blank" rel="noopener">PubMed 43084502 &rarr;</a></footer></article>
+<article class="p-fyi"><div class="eyebrow mono"><span class="j">BMC Anesthesiol</span><span class="sep">/</span><span>単施設後ろ向きコホート</span><span class="sep">/</span><span class="mono">n = 60</span></div><h3 class="mincho"><span class="num mono">5</span>人工関節置換術を受けた高齢者で、周術期エスケタミン使用は術後の抑うつ・不安スコア低下と関連</h3><p class="orig">Perioperative esketamine exposure and postoperative depression and anxiety in  elderly patients undergoing joint replacement surgery: a retrospective cohort  study.</p><ul class="findings"><li>エスケタミン群は術後3日目・7日目のHAMDとHAMAが有意に低い(P &lt; 0.05)</li><li>IL-6とTNF-αは術後3日目に低く(P &lt; 0.05)、BDNFは3日目・7日目に高い(P &lt; 0.01)</li><li>VASと有害事象は群間で有意差なし(P &gt; 0.05)</li></ul><dl class="notes"><dt>臨床的含意</dt><dd class="imp">仮説を立てる段階の結果で、術後の精神症状対策としてルーチンで使う根拠にはならない</dd><dt>限界</dt><dd class="lim">各群30例の後ろ向き研究で、せん妄など臨床的な転帰を見ていない</dd></dl><footer><button class="save mono" type="button" data-date="2026-11-27" data-pmid="43073756">📥 Notionに保存</button><span class="tags mono">#周術期　#術後抑うつ　#人工関節置換術</span><a class="mono" href="https://pubmed.ncbi.nlm.nih.gov/43073756/" target="_blank" rel="noopener">PubMed 43073756 &rarr;</a></footer></article>
+<div class="colophon"><span class="line">出典 PubMed / 取得窓 直近14日（PubMed登録日）・既配信は除外済み。</span><span class="line">数値は抄録の記載をそのまま写している。判断の前に必ず原著にあたること。</span></div></div>
+<script>
+(function(){
+  var W = "https://pubmed-inbox.okystthk.workers.dev";
+  document.addEventListener('click', function(ev){
+    var b = ev.target.closest('button.save');
+    if(!b || b.disabled) return;
+    var prev = b.textContent;
+    b.disabled = true; b.textContent = '保存中…';
+    fetch(W + '/save', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({date: b.dataset.date, pmid: b.dataset.pmid})
+    }).then(function(r){ return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function(){
+        b.textContent = '✓ 保存待ち（数分でNotionへ）'; b.classList.add('done');
+        try{ localStorage.setItem('saved:'+b.dataset.date+':'+b.dataset.pmid,'1'); }catch(e){}
+      })
+      .catch(function(){
+        b.disabled = false; b.textContent = prev;
+        b.classList.add('failed');
+        setTimeout(function(){ b.classList.remove('failed'); }, 2000);
+      });
+  });
+  // 同じ端末で押した分は、開き直しても「保存済み」のまま見える
+  try{
+    document.querySelectorAll('button.save').forEach(function(b){
+      if(localStorage.getItem('saved:'+b.dataset.date+':'+b.dataset.pmid)){
+        b.disabled = true; b.textContent = '✓ 保存済み'; b.classList.add('done');
+      }
+    });
+  }catch(e){}
+})();
+</script>
+</body></html>
